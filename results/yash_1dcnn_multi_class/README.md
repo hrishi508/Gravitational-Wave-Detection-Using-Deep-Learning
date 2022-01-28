@@ -1,7 +1,7 @@
 # 1D-CNN Multi-Class Model 1
 
 >## Model Architecture :
->### This following model has been obtained from the paper authored by Yash Chauhan [1](user-content-references-:). 
+>### This following model has been obtained from the paper authored by Yash Chauhan <a href="#references">[1]</a>. 
 ``` 
 Model: "sequential_1"
 _________________________________________________________________
@@ -61,7 +61,9 @@ _________________________________________________________________
 | S.No. | Data Type          | Mode of generation   | No. of Samples |
 | ----- | ------------------ | -------------------- | -------------- |
 | 1     | Noise              | Gaussian             | 5000           |
+| ----- | ------------------ | -------------------- | -------------- |
 | 2     | BBH signal + Noise | SEOBNRv2             | 5000           |
+| ----- | ------------------ | -------------------- | -------------- |
 | 3     | BNS signal + Noise | IMRPhenomPv2_NRTidal | 5000           |
 ```
 
@@ -70,10 +72,15 @@ _________________________________________________________________
 | Trial No. | Normalized? | Val split(in %) | Dropout rate | Optimizer | lr   | Batch Size | Epochs |
 | --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
 | 1         | No          | 0               | 0.2          | Adam      | 1e-3 | 256        | 10     |
+| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
 | 2         | No          | 0               | 0.2          | Adam      | 1e-2 | 128        | 10     |
+| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
 | 3         | No          | 0               | 0.2          | Adam      | 1e-2 | 128        | 15     |
+| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
 | 4         | No          | 0               | 0.2          | Adam      | 1e-1 | 128        | 10     |
+| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
 | 5         | No          | 0               | 0.2          | Adam      | 1e-4 | 128        | 10     |
+| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
 | 6         | Yes         | 0               | 0.2          | Adam      | 1e-3 | 128        | 10     |
 ```
 
@@ -98,12 +105,12 @@ _________________________________________________________________
 
 >## Conclusions :
 
-+ ### <p> Batch size = 128 is ideal since it has a faster runtime than batch size = 256 and it also does not cause the runtime  to crash due to exhaustion of RAM resources on colab. </p>
-+ ### <p> 10 epochs are enough to determine whether the model is able to learn any features. </p>
-+ ### <p> lr = 1e-4 hardly causes any change in the loss and accuracy at all so there is no point in reducing the learning rate further. </p>
-+ ### <p> Normalization of the dataset caused the training time to increase significantly, and the results were still baseline, so it is not feasible to try out further combinations with normalization. </p>
++ <p> Batch size = 128 is ideal since it has a faster runtime than batch size = 256 and it also does not cause the runtime  to crash due to exhaustion of RAM resources on colab. </p>
++ <p> 10 epochs are enough to determine whether the model is able to learn any features. </p>
++ <p> lr = 1e-4 hardly causes any change in the loss and accuracy at all so there is no point in reducing the learning rate further. </p>
++ <p> Normalization of the dataset caused the training time to increase significantly, and the results were still baseline, so it is not feasible to try out further combinations with normalization. </p>
 
 >## References :
-1. ### <p>Chauhan, Y., 2020. Deep Learning Techniques to Make Gravitational Wave Detections from Weak Time-series Data. arXiv preprint arXiv:2007.05889.</p>
+1. <p>Chauhan, Y., 2020. Deep Learning Techniques to Make Gravitational Wave Detections from Weak Time-series Data. arXiv preprint arXiv:2007.05889.</p>
 
 
