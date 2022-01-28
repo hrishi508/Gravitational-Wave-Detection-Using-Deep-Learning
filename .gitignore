@@ -1,0 +1,4 @@
+data/
+raw_data_files/
+temp_scripts/
+.ipynb_checkpoints
