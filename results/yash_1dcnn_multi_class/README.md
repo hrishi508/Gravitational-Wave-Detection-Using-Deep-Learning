@@ -1,7 +1,7 @@
 # 1D-CNN Multi-Class Model 1
 
 >## Model Architecture :
->### This following model has been obtained from the paper authored by Yash Chauhan [[1]](user-content-references-:). 
+>### This following model has been obtained from the paper authored by Yash Chauhan [1](user-content-references-:). 
 ``` 
 Model: "sequential_1"
 _________________________________________________________________
