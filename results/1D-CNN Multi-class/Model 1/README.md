@@ -1,8 +1,8 @@
 # 1D-CNN Multi-Class Model
 
 ## Model Architecture :
-The following model has been obtained from the paper authored by Yash Chauhan [1]. You can read this paper [here](Gravitational Wave Detection Using Deep Learning/Literature Review/Classification/1D-CNN/yash_chauhan.pdf).
-``` 
+The following model has been obtained from the paper authored by Yash Chauhan [1]. You can read this paper [here](https://github.com/hrishi508/Gravitational-Wave-Detection-Using-Deep-Learning/blob/master/Literature%20Review/Classification/1D-CNN/yash_chauhan.pdf).
+```
 Model: "sequential_1"
 _________________________________________________________________
 Layer (type)                 Output Shape              Param #   
