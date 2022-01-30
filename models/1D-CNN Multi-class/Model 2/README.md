@@ -1,6 +1,4 @@
-# 1D-CNN Multi-Class Model
-
-## Model Architecture :
+# Model Architecture :
 The following model has been obtained from the paper authored by Plamen G. Krastev [1]. You can read this paper [here](/Literature%20Review/Classification/1D-CNN/krastev_1.pdf).
 ``` 
 Model: "sequential"
@@ -45,14 +43,14 @@ Non-trainable params: 0
 _________________________________________________________________
 ```
 
-## Classes :
+# Classes :
 ```
 1. Noise 
 2. BBH signal + Noise
 3. BNS signal + Noise
 ```
 
-## Dataset :
+# Dataset :
 ```
 | S.No. | Data Type          | Mode of generation   | No. of Samples |
 | ----- | ------------------ | -------------------- | -------------- |
@@ -63,7 +61,7 @@ _________________________________________________________________
 | 3     | BNS signal + Noise | IMRPhenomPv2_NRTidal | 5000           |
 ```
 
-## Trial Hyperparameters :
+# Trial Hyperparameters :
 ```
 | Trial No. | Normalized? | Val split(in %) | Optimizer | lr   | Batch Size | Epochs |
 | --------- | ----------- | --------------- | --------- | ---- | ---------- | ------ |
@@ -80,43 +78,43 @@ _________________________________________________________________
 | 6         | Yes         | 0               | Adam      | 1e-5 | 128        | 100    |
 ```
 
-## Trial Results :
-### Trial 1:
+# Trial Results :
+## Trial 1:
 <p align="center"> <img src="screenshots/graph_1.png"> </p>
 <p align="center"> <img src="screenshots/1dcnn_multi_class_model_21.png"> </p>
 
 
-### Trial 2:
+## Trial 2:
 <p align="center"> <img src="screenshots/graph_2.png"> </p>
 <p align="center"> <img src="screenshots/1dcnn_multi_class_model_22.png"> </p>
 
 
-### Trial 3:
+## Trial 3:
 <p align="center"> <img src="screenshots/graph_3.png"> </p>
 <p align="center"> <img src="screenshots/1dcnn_multi_class_model_23.png"> </p>
 
 
-### Trial 4:
+## Trial 4:
 <p align="center"> <img src="screenshots/graph_4.png"> </p>
 <p align="center"> <img src="screenshots/1dcnn_multi_class_model_24.png"> </p>
 
 
-### Trial 5:
+## Trial 5:
 <p align="center"> <img src="screenshots/graph_5.png"> </p>
 <p align="center"> <img src="screenshots/1dcnn_multi_class_model_25.png"> </p>
 
 
-### Trial 6:
+## Trial 6:
 <p align="center"> <img src="screenshots/graph_6.png"> </p>
 <p align="center"> <img src="screenshots/1dcnn_multi_class_model_26.png"> </p>
 
 
-## Conclusions :
+# Conclusions :
 
 + This model is much smaller and faster than the one used [previously](/models/1D-CNN%20Multi-class/Model%201/), hence it was feasible to train this model on a large no. of epochs.
 + Normalization of the dataset caused the runtime on colab to crash due to insufficient RAM, and the results were still baseline, so it is not possible to try out further combinations with normalization.
 
-## References :
+# References :
 1. Krastev, Plamen. (2019). Real-Time Detection of Gravitational Waves from Binary Neutron Stars using Artificial Neural Networks.
 
 
