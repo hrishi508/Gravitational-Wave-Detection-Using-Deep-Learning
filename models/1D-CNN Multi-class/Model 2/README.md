@@ -3,48 +3,44 @@
 ## Model Architecture :
 The following model has been obtained from the paper authored by Plamen G. Krastev [1]. You can read this paper [here](/Literature%20Review/Classification/1D-CNN/krastev_1.pdf).
 ``` 
-Model: "sequential_1"
+Model: "sequential"
 _________________________________________________________________
 Layer (type)                 Output Shape              Param #   
 =================================================================
-conv1d_4 (Conv1D)            (None, 16353, 64)         2112      
+conv1d (Conv1D)              (None, 16369, 16)         272       
 _________________________________________________________________
-max_pooling1d_4 (MaxPooling1 (None, 4088, 64)          0         
+max_pooling1d (MaxPooling1D) (None, 4092, 16)          0         
 _________________________________________________________________
-re_lu_4 (ReLU)               (None, 4088, 64)          0         
+re_lu (ReLU)                 (None, 4092, 16)          0         
 _________________________________________________________________
-conv1d_5 (Conv1D)            (None, 4025, 128)         524416    
+conv1d_1 (Conv1D)            (None, 4085, 32)          4128      
 _________________________________________________________________
-max_pooling1d_5 (MaxPooling1 (None, 1006, 128)         0         
+max_pooling1d_1 (MaxPooling1 (None, 1021, 32)          0         
 _________________________________________________________________
-re_lu_5 (ReLU)               (None, 1006, 128)         0         
+re_lu_1 (ReLU)               (None, 1021, 32)          0         
 _________________________________________________________________
-conv1d_6 (Conv1D)            (None, 943, 256)          2097408   
+conv1d_2 (Conv1D)            (None, 1014, 64)          16448     
 _________________________________________________________________
-max_pooling1d_6 (MaxPooling1 (None, 235, 256)          0         
+max_pooling1d_2 (MaxPooling1 (None, 253, 64)           0         
 _________________________________________________________________
-re_lu_6 (ReLU)               (None, 235, 256)          0         
+re_lu_2 (ReLU)               (None, 253, 64)           0         
 _________________________________________________________________
-conv1d_7 (Conv1D)            (None, 108, 512)          16777728  
+conv1d_3 (Conv1D)            (None, 246, 128)          65664     
 _________________________________________________________________
-max_pooling1d_7 (MaxPooling1 (None, 27, 512)           0         
+max_pooling1d_3 (MaxPooling1 (None, 61, 128)           0         
 _________________________________________________________________
-re_lu_7 (ReLU)               (None, 27, 512)           0         
+re_lu_3 (ReLU)               (None, 61, 128)           0         
 _________________________________________________________________
-flatten_1 (Flatten)          (None, 13824)             0         
+flatten (Flatten)            (None, 7808)              0         
 _________________________________________________________________
-dense_4 (Dense)              (None, 13824)             191116800 
+dense (Dense)                (None, 7808)              60972672  
 _________________________________________________________________
-dense_5 (Dense)              (None, 128)               1769600   
+dense_1 (Dense)              (None, 64)                499776    
 _________________________________________________________________
-dense_6 (Dense)              (None, 64)                8256      
-_________________________________________________________________
-dropout_1 (Dropout)          (None, 64)                0         
-_________________________________________________________________
-dense_7 (Dense)              (None, 2)                 130       
+dense_2 (Dense)              (None, 3)                 195       
 =================================================================
-Total params: 212,296,450
-Trainable params: 212,296,450
+Total params: 61,559,155
+Trainable params: 61,559,155
 Non-trainable params: 0
 _________________________________________________________________
 ```
@@ -69,48 +65,60 @@ _________________________________________________________________
 
 ## Trial Hyperparameters :
 ```
-| Trial No. | Normalized? | Val split(in %) | Dropout rate | Optimizer | lr   | Batch Size | Epochs |
-| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 1         | No          | 0               | 0.2          | Adam      | 1e-3 | 256        | 10     |
-| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 2         | No          | 0               | 0.2          | Adam      | 1e-2 | 128        | 10     |
-| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 3         | No          | 0               | 0.2          | Adam      | 1e-2 | 128        | 15     |
-| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 4         | No          | 0               | 0.2          | Adam      | 1e-1 | 128        | 10     |
-| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 5         | No          | 0               | 0.2          | Adam      | 1e-4 | 128        | 10     |
-| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 6         | Yes         | 0               | 0.2          | Adam      | 1e-3 | 128        | 10     |
+| Trial No. | Normalized? | Val split(in %) | Optimizer | lr   | Batch Size | Epochs |
+| --------- | ----------- | --------------- | --------- | ---- | ---------- | ------ |
+| 1         | No          | 0               | Adam      | 1e-3 | 128        | 10     |
+| --------- | ----------- | --------------- | --------- | ---- | ---------- | ------ |
+| 2         | No          | 0               | Adam      | 1e-1 | 128        | 10     |
+| --------- | ----------- | --------------- | --------- | ---- | ---------- | ------ |
+| 3         | No          | 0               | Adam      | 1e-5 | 128        | 10     |
+| --------- | ----------- | --------------- | --------- | ---- | ---------- | ------ |
+| 4         | No          | 0               | Adam      | 1e-3 | 128        | 100    |
+| --------- | ----------- | --------------- | --------- | ---- | ---------- | ------ |
+| 5         | No          | 0               | Adam      | 1e-1 | 128        | 100    |
+| --------- | ----------- | --------------- | --------- | ---- | ---------- | ------ |
+| 6         | Yes         | 0               | Adam      | 1e-5 | 128        | 100    |
 ```
 
 ## Trial Results :
 ### Trial 1:
+<p align="center"> <img src="screenshots/graph_1.png"> </p>
 <p align="center"> <img src="screenshots/1dcnn_multi_class_model_21.png"> </p>
 
+
 ### Trial 2:
+<p align="center"> <img src="screenshots/graph_2.png"> </p>
 <p align="center"> <img src="screenshots/1dcnn_multi_class_model_22.png"> </p>
 
+
 ### Trial 3:
+<p align="center"> <img src="screenshots/graph_3.png"> </p>
 <p align="center"> <img src="screenshots/1dcnn_multi_class_model_23.png"> </p>
 
+
 ### Trial 4:
+<p align="center"> <img src="screenshots/graph_4.png"> </p>
 <p align="center"> <img src="screenshots/1dcnn_multi_class_model_24.png"> </p>
 
+
 ### Trial 5:
+<p align="center"> <img src="screenshots/graph_5.png"> </p>
 <p align="center"> <img src="screenshots/1dcnn_multi_class_model_25.png"> </p>
 
+
 ### Trial 6:
+<p align="center"> <img src="screenshots/graph_6.png"> </p>
 <p align="center"> <img src="screenshots/1dcnn_multi_class_model_26.png"> </p>
+
 
 ## Conclusions :
 
-+ <p> Batch size = 128 is ideal since it has a faster runtime than batch size = 256 and it also does not cause the runtime  to crash due to exhaustion of RAM resources on colab. </p>
-+ <p> 10 epochs are enough to determine whether the model is able to learn any features. </p>
-+ <p> lr = 1e-4 hardly causes any change in the loss and accuracy at all so there is no point in reducing the learning rate further. </p>
-+ <p> Normalization of the dataset caused the training time to increase significantly, and the results were still baseline, so it is not feasible to try out further combinations with normalization. </p>
++ This model is much smaller and faster than the one used [previously](/models/1D-CNN%20Multi-class/Model%201/), hence it was feasible to train this model on a large no. of epochs.
++ Normalization of the dataset caused the runtime on colab to crash due to insufficient RAM, and the results were still baseline, so it is not possible to try out further combinations with normalization.
 
 ## References :
-1. <p>Krastev, Plamen. (2019). Real-Time Detection of Gravitational Waves from Binary Neutron Stars using Artificial Neural Networks. </p>
+1. Krastev, Plamen. (2019). Real-Time Detection of Gravitational Waves from Binary Neutron Stars using Artificial Neural Networks.
+
+
 
 
