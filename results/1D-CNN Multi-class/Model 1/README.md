@@ -1,7 +1,7 @@
 # 1D-CNN Multi-Class Model
 
 ## Model Architecture :
-The following model has been obtained from the paper authored by Yash Chauhan [1]. You can read this paper [here](https://github.com/hrishi508/Gravitational-Wave-Detection-Using-Deep-Learning/blob/master/Literature%20Review/Classification/1D-CNN/yash_chauhan.pdf).
+The following model has been obtained from the paper authored by Yash Chauhan [1]. You can read this paper [here](/Literature%20Review/Classification/1D-CNN/yash_chauhan.pdf).
 ```
 Model: "sequential_1"
 _________________________________________________________________
@@ -51,9 +51,9 @@ _________________________________________________________________
 
 ## Classes :
 ```
-    1. Noise 
-    2. BBH signal + Noise
-    3. BNS signal + Noise
+1. Noise 
+2. BBH signal + Noise
+3. BNS signal + Noise
 ```
 
 ## Dataset :

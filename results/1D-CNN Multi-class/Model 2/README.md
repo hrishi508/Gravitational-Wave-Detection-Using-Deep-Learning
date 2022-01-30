@@ -1,7 +1,7 @@
 # 1D-CNN Multi-Class Model
 
 ## Model Architecture :
-The following model has been obtained from the paper authored by Yash Chauhan [1].
+The following model has been obtained from the paper authored by Plamen G. Krastev [1]. You can read this paper [here](/Literature%20Review/Classification/1D-CNN/krastev_1.pdf).
 ``` 
 Model: "sequential_1"
 _________________________________________________________________
@@ -51,9 +51,9 @@ _________________________________________________________________
 
 ## Classes :
 ```
-    1. Noise 
-    2. BBH signal + Noise
-    3. BNS signal + Noise
+1. Noise 
+2. BBH signal + Noise
+3. BNS signal + Noise
 ```
 
 ## Dataset :
@@ -86,22 +86,22 @@ _________________________________________________________________
 
 ## Trial Results :
 ### Trial 1:
-<p align="center"> <img src="screenshots/1dcnn_multi_class_model_11.png"> </p>
+<p align="center"> <img src="screenshots/1dcnn_multi_class_model_21.png"> </p>
 
 ### Trial 2:
-<p align="center"> <img src="screenshots/1dcnn_multi_class_model_12.png"> </p>
+<p align="center"> <img src="screenshots/1dcnn_multi_class_model_22.png"> </p>
 
 ### Trial 3:
-<p align="center"> <img src="screenshots/1dcnn_multi_class_model_13.png"> </p>
+<p align="center"> <img src="screenshots/1dcnn_multi_class_model_23.png"> </p>
 
 ### Trial 4:
-<p align="center"> <img src="screenshots/1dcnn_multi_class_model_14.png"> </p>
+<p align="center"> <img src="screenshots/1dcnn_multi_class_model_24.png"> </p>
 
 ### Trial 5:
-<p align="center"> <img src="screenshots/1dcnn_multi_class_model_15.png"> </p>
+<p align="center"> <img src="screenshots/1dcnn_multi_class_model_25.png"> </p>
 
 ### Trial 6:
-<p align="center"> <img src="screenshots/1dcnn_multi_class_model_16.png"> </p>
+<p align="center"> <img src="screenshots/1dcnn_multi_class_model_26.png"> </p>
 
 ## Conclusions :
 
@@ -111,6 +111,6 @@ _________________________________________________________________
 + <p> Normalization of the dataset caused the training time to increase significantly, and the results were still baseline, so it is not feasible to try out further combinations with normalization. </p>
 
 ## References :
-1. <p>Chauhan, Y., 2020. Deep Learning Techniques to Make Gravitational Wave Detections from Weak Time-series Data. arXiv preprint arXiv:2007.05889.</p>
+1. <p>Krastev, Plamen. (2019). Real-Time Detection of Gravitational Waves from Binary Neutron Stars using Artificial Neural Networks. </p>
 
 
