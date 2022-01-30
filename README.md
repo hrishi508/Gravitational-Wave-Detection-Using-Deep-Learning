@@ -5,7 +5,7 @@ The strongest gravitational waves are produced by cataclysmic events such as **c
 
 The animation below illustrates how gravitational waves are emitted by two neutron stars as they orbit each other and then coalesce (credit: NASA/Goddard Space Flight Center). Note that gravitational waves themselves are invisible. They are made visible here to illustrate their propagation away from the source.
 
-
+https://user-images.githubusercontent.com/68325029/151689052-8522d79c-68ce-49a9-88f1-1959bb0550e6.mp4
 
 According to Krastev [1], the groundbreaking discoveries of **gravitational waves** from **binary black-hole mergers** and **coalescing neutron stars** have started a new era of Multi-Messenger Astrophysics. In this project we use various deep-learning techniques to rapidly identify transient gravitational-wave signals from binary neutron star and black-hole mergers in a noisy time series representative of typical gravitational-wave detector data. These results demonstrate the potential of artificial neural networks for real-time detection of gravitational-wave signals from binary neutron star mergers, which is critical for a prompt follow-up and detailed observation of the electromagnetic and astro-particle counterparts accompanying these important transients.
 
