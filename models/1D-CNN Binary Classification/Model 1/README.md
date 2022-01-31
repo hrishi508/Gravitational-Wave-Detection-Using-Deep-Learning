@@ -73,30 +73,24 @@ _________________________________________________________________
 | 3         | No          | 0               | 0.2          | Adam      | 1e-5 | 128        | 10     |
 | --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
 | 4         | Yes         | 0               | 0.2          | Adam      | 1e-3 | 128        | 10     |
-| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 5         | Yes         | 0               | 0.2          | Adam      | 1e-1 | 128        | 10     |
-| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 6         | Yes         | 0               | 0.2          | Adam      | 1e-5 | 128        | 10     |
 ```
 
 # Trial Results :
 ## Trial 1:
 <p align="center"> <img src="screenshots/1dcnn_binary_class_model_11.png"> </p>
+<p align="center"> <img src="screenshots/graph_1.png"> </p>
 
 ## Trial 2:
 <p align="center"> <img src="screenshots/1dcnn_binary_class_model_12.png"> </p>
+<p align="center"> <img src="screenshots/graph_2.png"> </p>
 
 ## Trial 3:
 <p align="center"> <img src="screenshots/1dcnn_binary_class_model_13.png"> </p>
+<p align="center"> <img src="screenshots/graph_3.png"> </p>
 
 ## Trial 4:
 <p align="center"> <img src="screenshots/1dcnn_binary_class_model_14.png"> </p>
-
-## Trial 5:
-<p align="center"> <img src="screenshots/1dcnn_binary_class_model_15.png"> </p>
-
-## Trial 6:
-<p align="center"> <img src="screenshots/1dcnn_binary_class_model_16.png"> </p>
+<p align="center"> <img src="screenshots/graph_4.png"> </p>
 
 # Conclusions :
 
