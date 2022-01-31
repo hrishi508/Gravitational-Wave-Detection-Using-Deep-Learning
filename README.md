@@ -48,3 +48,4 @@ Insert results here.
 5. Ormiston, R., Nguyen, T., Coughlin, M., Adhikari, R.X. and Katsavounidis, E., 2020. Noise reduction in gravitational-wave data via deep learning. Physical Review Research, 2(3), p.033066.
 6. https://www.ligo.caltech.edu/page/what-are-gw
 7. https://www.gw-openscience.org/
+8. Tang, W., Long, G., Liu, L., Zhou, T., Jiang, J. and Blumenstein, M., 2020. Rethinking 1d-cnn for time series classification: A stronger baseline. arXiv preprint arXiv:2002.10061.
