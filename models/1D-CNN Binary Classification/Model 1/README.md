@@ -64,33 +64,39 @@ _________________________________________________________________
 
 # Trial Hyperparameters :
 ```
-| Trial No. | Normalized? | Val split(in %) | Dropout rate | Optimizer | lr   | Batch Size | Epochs |
-| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 1         | No          | 0               | 0.2          | Adam      | 1e-3 | 128        | 10     |
-| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 2         | No          | 0               | 0.2          | Adam      | 1e-1 | 128        | 10     |
-| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 3         | No          | 0               | 0.2          | Adam      | 1e-5 | 128        | 10     |
-| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 4         | Yes         | 0               | 0.2          | Adam      | 1e-3 | 128        | 10     |
+| Trial No. | Normalized? | Amplitude Re-Scaled? | Val split(in %) | Dropout rate | Optimizer | lr   | Batch Size | Epochs |
+| --------- | ----------- | -------------------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
+| 1         | No          | No                   | 0               | 0.2          | Adam      | 1e-3 | 128        | 10     |
+| --------- | ----------- | -------------------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
+| 2         | No          | No                   | 0               | 0.2          | Adam      | 1e-1 | 128        | 10     |
+| --------- | ----------- | -------------------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
+| 3         | No          | No                   | 0               | 0.2          | Adam      | 1e-5 | 128        | 10     |
+| --------- | ----------- | -------------------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
+| 4         | Yes         | Yes (Due to Norm)    | 0               | 0.2          | Adam      | 1e-3 | 128        | 10     |
+| --------- | ----------- | -------------------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
+| 5         | No          | Yes                  | 20              | 0.2          | Adam      | 1e-3 | 128        | 5      |
 ```
-
+ 
 # Trial Results :
 ## Trial 1:
-<p align="center"> <img src="screenshots/1dcnn_binary_class_model_11.png"> </p>
 <p align="center"> <img src="screenshots/graph_1.png"> </p>
+<p align="center"> <img src="screenshots/1dcnn_binary_class_model_11.png"> </p>
 
 ## Trial 2:
-<p align="center"> <img src="screenshots/1dcnn_binary_class_model_12.png"> </p>
 <p align="center"> <img src="screenshots/graph_2.png"> </p>
+<p align="center"> <img src="screenshots/1dcnn_binary_class_model_12.png"> </p>
 
 ## Trial 3:
-<p align="center"> <img src="screenshots/1dcnn_binary_class_model_13.png"> </p>
 <p align="center"> <img src="screenshots/graph_3.png"> </p>
+<p align="center"> <img src="screenshots/1dcnn_binary_class_model_13.png"> </p>
 
 ## Trial 4:
-<p align="center"> <img src="screenshots/1dcnn_binary_class_model_14.png"> </p>
 <p align="center"> <img src="screenshots/graph_4.png"> </p>
+<p align="center"> <img src="screenshots/1dcnn_binary_class_model_14.png"> </p>
+
+## Trial 5:
+<p align="center"> <img src="screenshots/graph_5.png"> </p>
+<p align="center"> <img src="screenshots/1dcnn_binary_class_model_15.png"> </p>
 
 # Conclusions :
 
