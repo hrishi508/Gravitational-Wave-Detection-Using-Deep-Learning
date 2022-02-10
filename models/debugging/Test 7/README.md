@@ -5,13 +5,14 @@
 ```
 
 # Dataset :
+It is ensured that the signal is well hidden in the merged BBH signal + Noise. 
 ```
-| S.No. | Data Type          | Mode of Generation | No. of Samples | Noise Label              | Signal Label   |
-| ----- | ------------------ | ------------------ | -------------- | ------------------------ | -------------- |
-| 1     | Noise              | Gaussian           | 5000           | N1, N2, N3, .... , N5000 | Not Applicable |
-| ----- | ------------------ | ------------------ | -------------- | ------------------------ | -------------- |
-| 2     | BBH signal + Noise | SEOBNRv2           | 5000           | N1, N2, N3, .... , N5000 | S1             |
-| ----- | ------------------ | ------------------ | -------------- | ------------------------ | -------------- |
+| S.No. | Data Type          | Mode of Generation | No. of Samples | Noise Label | Signal Label   |
+| ----- | ------------------ | ------------------ | -------------- | ----------- | -------------- |
+| 1     | Noise              | Gaussian           | 5000           | N1          | Not Applicable |
+| ----- | ------------------ | ------------------ | -------------- | ----------- | -------------- |
+| 2     | BBH signal + Noise | SEOBNRv2           | 5000           | N1          | S1             |
+| ----- | ------------------ | ------------------ | -------------- | ----------- | -------------- |
 ```
 
 # Model Architecture :
@@ -63,11 +64,7 @@ _________________________________________________________________
 ```
 | Trial No. | Normalized? | Amplitude Re-Scaled? | Val split(in %) | Optimizer | lr   | Batch Size | Epochs |
 | --------- | ----------- | -------------------- | --------------- | --------- | ---- | ---------- | ------ |
-| 1         | No          | No                   | 0               | Adam      | 1e-3 | 128        | 5      |
-| --------- | ----------- | -------------------- | --------------- | --------- | ---- | ---------- | ------ |
-| 2         | Yes         | Yes (Due to Norm)    | 0               | Adam      | 1e-3 | 128        | 5      |
-| --------- | ----------- | -------------------- | --------------- | --------- | ---- | ---------- | ------ |
-| 3         | No          | Yes                  | 0               | Adam      | 1e-3 | 128        | 5      |
+| 1         | No          | Yes                  | 0               | Adam      | 1e-3 | 128        | 5      |
 | --------- | ----------- | -------------------- | --------------- | --------- | ---- | ---------- | ------ |
 ```
 
@@ -75,14 +72,6 @@ _________________________________________________________________
 ## Trial 1:
 <p align="center"> <img src="screenshots/graph_1.png"> </p>
 <p align="center"> <img src="screenshots/trial_1.png"> </p>
-
-## Trial 2:
-<p align="center"> <img src="screenshots/graph_2.png"> </p>
-<p align="center"> <img src="screenshots/trial_2.png"> </p>
-
-## Trial 3:
-<p align="center"> <img src="screenshots/graph_3.png"> </p>
-<p align="center"> <img src="screenshots/trial_3.png"> </p>
 
 # References :
 1. Krastev, Plamen. (2019). Real-Time Detection of Gravitational Waves from Binary Neutron Stars using Artificial Neural Networks.
