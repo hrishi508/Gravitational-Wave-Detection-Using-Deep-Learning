@@ -10,6 +10,7 @@ It is ensured that the signal is well hidden in the merged BBH signal + Noise.
 | S.No. | Data Type          | Mode of Generation     | No. of Samples | Noise Label              | Signal Label   |
 | ----- | ------------------ | ---------------------- | -------------- | ------------------------ | -------------- |
 | 1     | Noise              | Gaussian (scale = 0.1) | 5000           | N1, N2, N3, .... , N5000 | Not Applicable |
+|       |                    | (multiplied by 10)     |                |                          |                |
 | ----- | ------------------ | ---------------------- | -------------- | ------------------------ | -------------- |
 | 2     | BBH signal + Noise | SEOBNRv2               | 5000           | N1, N2, N3, .... , N5000 | S1             |
 | ----- | ------------------ | ---------------------- | -------------- | ------------------------ | -------------- |
