@@ -62,16 +62,22 @@ _________________________________________________________________
 
 # Trial Hyperparameters :
 ```
-| Trial No. | Normalized? | Amplitude Re-Scaled? | Val split(in %) | Optimizer | lr   | Batch Size | Epochs |
-| --------- | ----------- | -------------------- | --------------- | --------- | ---- | ---------- | ------ |
-| 1         | No          | Yes                  | 0               | Adam      | 1e-3 | 128        | 10     |
-| --------- | ----------- | -------------------- | --------------- | --------- | ---- | ---------- | ------ |
+| Trial No. | Accuracy | Normalized? | Amplitude Re-Scaled? | Optimizer | lr   | Batch Size | Epochs |
+| --------- | -------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
+| 1         | 49.68%   | No          | Yes (By 1e19)        | Adam      | 1e-3 | 128        | 10     |
+| --------- | -------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
+| 2         | 49.99%   | No          | Yes (By 1e18)        | Adam      | 1e-3 | 128        | 5      |
+| --------- | -------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
 ```
 
 # Trial Results :
 ## Trial 1:
 <p align="center"> <img src="screenshots/graph_1.png"> </p>
 <p align="center"> <img src="screenshots/trial_1.png"> </p>
+
+## Trial 2:
+<p align="center"> <img src="screenshots/graph_2.png"> </p>
+<p align="center"> <img src="screenshots/trial_2.png"> </p>
 
 # References :
 1. Krastev, Plamen. (2019). Real-Time Detection of Gravitational Waves from Binary Neutron Stars using Artificial Neural Networks.

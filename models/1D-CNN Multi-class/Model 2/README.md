@@ -59,67 +59,26 @@ _________________________________________________________________
 | 2     | BBH signal + Noise | SEOBNRv2             | 5000           |
 | ----- | ------------------ | -------------------- | -------------- |
 | 3     | BNS signal + Noise | IMRPhenomPv2_NRTidal | 5000           |
+| ----- | ------------------ | -------------------- | -------------- |
 ```
 
 # Trial Hyperparameters :
 ```
-| Trial No. | Normalized? | Amplitude Re-Scaled? | Val split(in %) | Optimizer | lr   | Batch Size | Epochs |
-| --------- | ----------- | -------------------- | --------------- | --------- | ---- | ---------- | ------ |
-| 1         | No          | No                   | 0               | Adam      | 1e-3 | 128        | 10     |
-| --------- | ----------- | -------------------- | --------------- | --------- | ---- | ---------- | ------ |
-| 2         | No          | No                   | 0               | Adam      | 1e-1 | 128        | 10     |
-| --------- | ----------- | -------------------- | --------------- | --------- | ---- | ---------- | ------ |
-| 3         | No          | No                   | 0               | Adam      | 1e-5 | 128        | 10     |
-| --------- | ----------- | -------------------- | --------------- | --------- | ---- | ---------- | ------ |
-| 4         | No          | No                   | 0               | Adam      | 1e-3 | 128        | 100    |
-| --------- | ----------- | -------------------- | --------------- | --------- | ---- | ---------- | ------ |
-| 5         | No          | No                   | 0               | Adam      | 1e-1 | 128        | 100    |
-| --------- | ----------- | -------------------- | --------------- | --------- | ---- | ---------- | ------ |
-| 6         | Yes         | Yes (Due to Norm)    | 0               | Adam      | 1e-5 | 128        | 100    |
-| --------- | ----------- | -------------------- | --------------- | --------- | ---- | ---------- | ------ |
-| 7         | No          | Yes                  | 20              | Adam      | 1e-3 | 128        | 5      |
-| --------- | ----------- | -------------------- | --------------- | --------- | ---- | ---------- | ------ |
+| Trial No. | Acc. | Normalized? | Amplitude Re-Scaled?    | Optimizer | lr   | Batch Size | Epochs |
+| --------- | ---- | ----------- | ----------------------- | --------- | ---- | ---------- | ------ |
+| 1         | 100% | No          | Yes                     | Adam      | 1e-3 | 128        | 10     |
+|           |      |             | (Noise       - by 1e19) |           |      |            |        |
+|           |      |             | (BBH + Noise - by 1e19) |           |      |            |        |
+|           |      |             | (BNS + Noise - by 1e20) |           |      |            |        |
+| --------- | ---- | ----------- | ----------------------- | --------- | ---- | ---------- | ------ |
 ```
+
+
 
 # Trial Results :
 ## Trial 1:
 <p align="center"> <img src="screenshots/graph_1.png"> </p>
-<p align="center"> <img src="screenshots/1dcnn_multi_class_model_21.png"> </p>
-
-
-## Trial 2:
-<p align="center"> <img src="screenshots/graph_2.png"> </p>
-<p align="center"> <img src="screenshots/1dcnn_multi_class_model_22.png"> </p>
-
-
-## Trial 3:
-<p align="center"> <img src="screenshots/graph_3.png"> </p>
-<p align="center"> <img src="screenshots/1dcnn_multi_class_model_23.png"> </p>
-
-
-## Trial 4:
-<p align="center"> <img src="screenshots/graph_4.png"> </p>
-<p align="center"> <img src="screenshots/1dcnn_multi_class_model_24.png"> </p>
-
-
-## Trial 5:
-<p align="center"> <img src="screenshots/graph_5.png"> </p>
-<p align="center"> <img src="screenshots/1dcnn_multi_class_model_25.png"> </p>
-
-
-## Trial 6:
-<p align="center"> <img src="screenshots/graph_6.png"> </p>
-<p align="center"> <img src="screenshots/1dcnn_multi_class_model_26.png"> </p>
-
-## Trial 7:
-<p align="center"> <img src="screenshots/graph_7.png"> </p>
-<p align="center"> <img src="screenshots/1dcnn_multi_class_model_27.png"> </p>
-
-
-# Conclusions :
-
-+ This model is much smaller and faster than the one used [previously](/models/1D-CNN%20Multi-class/Model%201/), hence it was feasible to train this model on a large no. of epochs.
-+ Normalization of the dataset caused the runtime on colab to crash due to insufficient RAM, and the results were still baseline, so it is not possible to try out further combinations with normalization.
+<p align="center"> <img src="screenshots/trial_1.png"> </p>
 
 # References :
 1. Krastev, Plamen. (2019). Real-Time Detection of Gravitational Waves from Binary Neutron Stars using Artificial Neural Networks.
