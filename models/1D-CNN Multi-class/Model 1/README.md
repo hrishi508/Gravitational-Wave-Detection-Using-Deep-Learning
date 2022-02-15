@@ -63,50 +63,21 @@ _________________________________________________________________
 | 2     | BBH signal + Noise | SEOBNRv2             | 5000           |
 | ----- | ------------------ | -------------------- | -------------- |
 | 3     | BNS signal + Noise | IMRPhenomPv2_NRTidal | 5000           |
+| ----- | ------------------ | -------------------- | -------------- |
 ```
 
 # Trial Hyperparameters :
 ```
-| Trial No. | Normalized? | Val split(in %) | Dropout rate | Optimizer | lr   | Batch Size | Epochs |
-| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 1         | No          | 0               | 0.2          | Adam      | 1e-3 | 256        | 10     |
-| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 2         | No          | 0               | 0.2          | Adam      | 1e-2 | 128        | 10     |
-| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 3         | No          | 0               | 0.2          | Adam      | 1e-2 | 128        | 15     |
-| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 4         | No          | 0               | 0.2          | Adam      | 1e-1 | 128        | 10     |
-| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 5         | No          | 0               | 0.2          | Adam      | 1e-4 | 128        | 10     |
-| --------- | ----------- | --------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 6         | Yes         | 0               | 0.2          | Adam      | 1e-3 | 128        | 10     |
+| Trial No. | Accuracy | Normalized? | Dropout rate | Optimizer | lr   | Batch Size | Epochs |
+| --------- | -------- | ----------- | ------------ | --------- | ---- | ---------- | ------ |
+| 1         |          | No          | 0.2          | Adam      | 1e-3 | 128        | 10     |
+| --------- | -------- | ----------- | ------------ | --------- | ---- | ---------- | ------ |
 ```
 
 # Trial Results :
 ## Trial 1:
-<p align="center"> <img src="screenshots/1dcnn_multi_class_model_11.png"> </p>
-
-## Trial 2:
-<p align="center"> <img src="screenshots/1dcnn_multi_class_model_12.png"> </p>
-
-## Trial 3:
-<p align="center"> <img src="screenshots/1dcnn_multi_class_model_13.png"> </p>
-
-## Trial 4:
-<p align="center"> <img src="screenshots/1dcnn_multi_class_model_14.png"> </p>
-
-## Trial 5:
-<p align="center"> <img src="screenshots/1dcnn_multi_class_model_15.png"> </p>
-
-## Trial 6:
-<p align="center"> <img src="screenshots/1dcnn_multi_class_model_16.png"> </p>
-
-# Conclusions :
-
-+ Batch size = 128 is ideal since it has a faster runtime than batch size = 256 and it also does not cause the runtime  to crash due to exhaustion of RAM resources on colab. 
-+ 10 epochs are enough to determine whether the model is able to learn any features. 
-+ lr = 1e-4 hardly causes any change in the loss and accuracy at all so there is no point in reducing the learning rate further. 
-+ Normalization of the dataset caused the training time to increase significantly, and the results were still baseline, so it is not feasible to try out further combinations with normalization. 
+<p align="center"> <img src="screenshots/graph_1.png"> </p>
+<p align="center"> <img src="screenshots/trial_1.png"> </p> 
 
 # References :
 1. Chauhan, Y., 2020. Deep Learning Techniques to Make Gravitational Wave Detections from Weak Time-series Data. arXiv preprint arXiv:2007.05889.
