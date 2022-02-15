@@ -55,6 +55,7 @@ _________________________________________________________________
 ```
 
 # Dataset :
+To generate this dataset, use the "IMPORTS" section (code cell no. 1), the "BBH Data Generation" section (code cell no. 2-6) and the "BNS Data Generation" section (code cell no. 7-11) of the [Data Generation](/scripts/Data%20Generation.ipynb) script.
 ```
 | S.No. | Data Type          | Mode of generation   | No. of Samples |
 | ----- | ------------------ | -------------------- | -------------- |
@@ -68,10 +69,13 @@ _________________________________________________________________
 
 # Trial Hyperparameters :
 ```
-| Trial No. | Accuracy | Normalized? | Dropout rate | Optimizer | lr   | Batch Size | Epochs |
-| --------- | -------- | ----------- | ------------ | --------- | ---- | ---------- | ------ |
-| 1         |          | No          | 0.2          | Adam      | 1e-3 | 128        | 10     |
-| --------- | -------- | ----------- | ------------ | --------- | ---- | ---------- | ------ |
+| Trial No. | Accuracy | Normalized? | Amplitude Re-Scaled?    | Dropout | Optimizer | lr   | Batch Size | Epochs |
+| --------- | -------- | ----------- | ----------------------- | ------- | --------- | ---- | ---------- | ------ |
+| 1         | 33.56%   | No          | Yes                     | 0.2     | Adam      | 1e-3 | 128        | 10     |
+|           |          |             | (Noise       - by 1e19) |         |           |      |            |        |
+|           |          |             | (BBH + Noise - by 1e19) |         |           |      |            |        |
+|           |          |             | (BNS + Noise - by 1e20) |         |           |      |            |        |
+| --------- | -------- | ----------- | ----------------------- | ------- | --------- | ---- | ---------- | ------ |
 ```
 
 # Trial Results :

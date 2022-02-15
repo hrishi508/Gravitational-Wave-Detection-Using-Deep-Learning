@@ -4,3 +4,5 @@ temp_scripts/
 .ipynb_checkpoints
 plots/
 LIGO Detector Data/
+val_data/
+raw_val_data_files/

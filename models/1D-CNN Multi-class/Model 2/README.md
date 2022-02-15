@@ -51,6 +51,7 @@ _________________________________________________________________
 ```
 
 # Dataset :
+To generate this dataset, use the "IMPORTS" section (code cell no. 1), the "BBH Data Generation" section (code cell no. 2-6) and the "BNS Data Generation" section (code cell no. 7-11) of the [Data Generation](/scripts/Data%20Generation.ipynb) script.
 ```
 | S.No. | Data Type          | Mode of generation   | No. of Samples |
 | ----- | ------------------ | -------------------- | -------------- |
