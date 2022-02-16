@@ -60,34 +60,65 @@ _________________________________________________________________
 ```
 
 # Trial Hyperparameters :
+"5-F CV" in the last column represents 5-Fold Cross Validation. 
 ```
-| Trial No. | Accuracy | Normalized? | Amplitude Re-Scaled? | Optimizer | lr   | Batch Size | Epochs |
-| --------- | -------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
-| 1         | 49.12%   | No          | No                   | Adam      | 1e-3 | 1          | 2      |
-| --------- | -------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
-| 2         | 100%     | Yes         | Yes (Due to Norm)    | Adam      | 1e-3 | 1          | 2      |
-| --------- | -------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
-| 3         | 100%     | No          | Yes (by 1e19)        | Adam      | 1e-3 | 1          | 2      |
-| --------- | -------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
-| 4         | 100%     | No          | Yes (by 1e19)        | Adam      | 1e-3 | 128        | 2      |
-| --------- | -------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
+| Trial No. | Normalized? | Amplitude Re-Scaled? | Optimizer | lr   | Batch Size | Epochs | 5-F CV |
+| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
+| 1         | No          | No                   | Adam      | 1e-3 | 1          | 2      | No     |
+| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
+| 2         | Yes         | Yes (Due to Norm)    | Adam      | 1e-3 | 1          | 2      | No     |
+| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
+| 3         | No          | Yes (by 1e19)        | Adam      | 1e-3 | 1          | 2      | No     |
+| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
+| 4         | No          | Yes (by 1e19)        | Adam      | 1e-3 | 128        | 2      | No     |
+| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
+| 5         | No          | Yes (by 1e19)        | Adam      | 1e-3 | 128        | 2      | Yes    |
+| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
 ```
 
 # Trial Results :
+```
+| Trial No. | Accuracy | Precision | Recall | F1 Score |
+| --------- | -------- | --------- | ------ | -------- |
+| 1         | 49.12%   | -         | -      | -        |
+| --------- | -------- | --------- | ------ | -------- |
+| 2         | 100%     | -         | -      | -        |
+| --------- | -------- | --------- | ------ | -------- |
+| 3         | 100%     | 1         | 1      | 1        |
+| --------- | -------- | --------- | ------ | -------- |
+| 4         | 100%     | 1         | 1      | 1        |
+| --------- | -------- | --------- | ------ | -------- |
+| 5         | 100%     | 1         | 1      | 1        |
+| --------- | -------- | --------- | ------ | -------- |
+```
+
+<hr>
+
 ## Trial 1:
 <p align="center"> <img src="screenshots/trial_1.png"> </p>
+<hr>
 
 ## Trial 2:
 <p align="center"> <img src="screenshots/graph_2.png"> </p>
 <p align="center"> <img src="screenshots/trial_2.png"> </p>
+<hr>
 
 ## Trial 3:
+<p align="center"> <img src="screenshots/cm_3.png"> </p>
 <p align="center"> <img src="screenshots/graph_3.png"> </p>
 <p align="center"> <img src="screenshots/trial_3.png"> </p>
+<hr>
 
 ## Trial 4:
+<p align="center"> <img src="screenshots/cm_4.png"> </p>
 <p align="center"> <img src="screenshots/graph_4.png"> </p>
 <p align="center"> <img src="screenshots/trial_4.png"> </p>
+<hr>
+
+## Trial 5:
+<p align="center"> <img src="screenshots/cm_5.png"> </p>
+<p align="center"> <img src="screenshots/graph_5.png"> </p>
+<p align="center"> <img src="screenshots/trial_5.png"> </p>
 
 # References :
 1. Krastev, Plamen. (2019). Real-Time Detection of Gravitational Waves from Binary Neutron Stars using Artificial Neural Networks.

@@ -63,20 +63,34 @@ _________________________________________________________________
 
 # Trial Hyperparameters :
 ```
-| Trial No. | Accuracy | Normalized? | Amplitude Re-Scaled? | Optimizer | lr   | Batch Size | Epochs |
-| --------- | -------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
-| 1         | 49.61%   | No          | Yes (By 1e19)        | Adam      | 1e-3 | 128        | 5      |
-| --------- | -------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
-| 2         | 49.60%   | No          | Yes (By 1e18)        | Adam      | 1e-3 | 128        | 5      |
-| --------- | -------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
+| Trial No. | Normalized? | Amplitude Re-Scaled? | Optimizer | lr   | Batch Size | Epochs |
+| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
+| 1         | No          | Yes (By 1e19)        | Adam      | 1e-3 | 128        | 5      |
+| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
+| 2         | No          | Yes (By 1e18)        | Adam      | 1e-3 | 128        | 5      |
+| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
 ```
 
 # Trial Results :
+```
+| Trial No. | Accuracy | Precision | Recall | F1 Score |
+| --------- | -------- | --------- | ------ | -------- |
+| 1         | 49.61%   | 0.5       | 1      | 0.667    |
+| --------- | -------- | --------- | ------ | -------- |
+| 2         | 49.60%   | 0         | 0      | -        |
+| --------- | -------- | --------- | ------ | -------- |
+```
+
+<hr>
+
 ## Trial 1:
+<p align="center"> <img src="screenshots/cm_1.png"> </p>
 <p align="center"> <img src="screenshots/graph_1.png"> </p>
 <p align="center"> <img src="screenshots/trial_1.png"> </p>
+<hr>
 
 ## Trial 2:
+<p align="center"> <img src="screenshots/cm_2.png"> </p>
 <p align="center"> <img src="screenshots/graph_2.png"> </p>
 <p align="center"> <img src="screenshots/trial_2.png"> </p>
 

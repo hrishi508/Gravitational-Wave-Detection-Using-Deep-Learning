@@ -61,23 +61,48 @@ _________________________________________________________________
 ```
 
 # Trial Hyperparameters :
+"5-F CV" in the last column represents 5-Fold Cross Validation. 
 ```
-| Trial No. | Accuracy | Normalized? | Amplitude Re-Scaled? | Optimizer | lr   | Batch Size | Epochs |
-| --------- | -------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
-| 1         | 49.73%   | No          | Yes (By 1e19)        | Adam      | 1e-3 | 128        | 5      |
-| --------- | -------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
-| 2         | 100%     | No          | Yes (By 1e18)        | Adam      | 1e-3 | 128        | 5      |
-| --------- | -------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
+| Trial No. | Normalized? | Amplitude Re-Scaled? | Optimizer | lr   | Batch Size | Epochs | 5-F CV |
+| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
+| 1         | No          | Yes (By 1e19)        | Adam      | 1e-3 | 128        | 5      | No     |
+| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
+| 2         | No          | Yes (By 1e18)        | Adam      | 1e-3 | 128        | 5      | No     |
+| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
+| 3         | No          | Yes (By 1e18)        | Adam      | 1e-3 | 128        | 2      | Yes    |
+| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
 ```
 
 # Trial Results :
+```
+| Trial No. | Accuracy | Precision | Recall | F1 Score |
+| --------- | -------- | --------- | ------ | -------- |
+| 1         | 49.73%   | 0.5       | 1      | 0.667    |
+| --------- | -------- | --------- | ------ | -------- |
+| 2         | 100%     | 1         | 1      | 1        |
+| --------- | -------- | --------- | ------ | -------- |
+| 3         | 90.1%    | 0.895     | 1      | 0.929    |
+| --------- | -------- | --------- | ------ | -------- |
+```
+
+<hr>
+
 ## Trial 1:
+<p align="center"> <img src="screenshots/cm_1.png"> </p>
 <p align="center"> <img src="screenshots/graph_1.png"> </p>
 <p align="center"> <img src="screenshots/trial_1.png"> </p>
+<hr>
 
 ## Trial 2:
+<p align="center"> <img src="screenshots/cm_2.png"> </p>
 <p align="center"> <img src="screenshots/graph_2.png"> </p>
 <p align="center"> <img src="screenshots/trial_2.png"> </p>
+<hr>
+
+## Trial 3:
+<p align="center"> <img src="screenshots/cm_3.png"> </p>
+<p align="center"> <img src="screenshots/graph_3.png"> </p>
+<p align="center"> <img src="screenshots/trial_3.png"> </p>
 
 # References :
 1. Krastev, Plamen. (2019). Real-Time Detection of Gravitational Waves from Binary Neutron Stars using Artificial Neural Networks.
