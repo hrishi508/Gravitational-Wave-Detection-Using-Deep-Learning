@@ -7,8 +7,6 @@ For example, the folder named ["1D-CNN Binary Classification"](/models/debugging
 Each folder in this section has the following structure:
 
 ## Folder 1
-<hr>
-
   - ### Signal_HIDDEN_in_strain_data
     - #### Signal_NOT_WHITENED
       - Test 1
