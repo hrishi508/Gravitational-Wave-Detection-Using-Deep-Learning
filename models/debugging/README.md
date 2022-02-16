@@ -31,19 +31,23 @@ Each folder in this section has the following structure:
 ```
 1. Signal_HIDDEN_in_strain_data
 --------------------------------
-In all the test cases contained in this sub-folder, the amplitude of the noise has been adjusted such that the signal is directly visible in the generated strain data.
+In all the test cases contained in this sub-folder, the amplitude of the noise has been adjusted 
+such that the signal is directly visible in the generated strain data.
 
 2. Signal_VISIBLE_in_strain_data
 --------------------------------
-In all the test cases contained in this sub-folder, the amplitude of the noise has been adjusted such that the signal is directly visible in the generated strain data.
+In all the test cases contained in this sub-folder, the amplitude of the noise has been adjusted 
+such that the signal is directly visible in the generated strain data.
 
 3. Signal_NOT_WHITENED
 --------------------------------
-In all the test cases contained in this sub-sub-folder, the signal is not whitened before injecting into the noise to generate the strain data.
+In all the test cases contained in this sub-sub-folder, the signal is not whitened before injecting 
+into the noise to generate the strain data.
 
 4. Signal_WHITENED
 --------------------------------
-In all the test cases contained in this sub-sub-folder, the signal is whitened before injecting into the noise to generate the strain data.
+In all the test cases contained in this sub-sub-folder, the signal is whitened before injecting 
+into the noise to generate the strain data.
 
 ```
 
