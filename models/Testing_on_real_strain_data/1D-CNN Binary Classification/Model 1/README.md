@@ -1,19 +1,4 @@
-# Classes :
-```
-1. Noise 
-2. BBH signal + Noise
-```
-
-# Dataset :
-It is ensured that the signal is well hidden in the merged BBH signal + Noise.
-```
-| S.No. | Data Type          | Mode                 | No. of Samples | Noise Label                        | Signal Label             |
-| ----- | ------------------ | -------------------- | -------------- | ---------------------------------- | ------------------------ |
-| 1     | Noise              | Gaussian (scale = 1) | 5000           | N1, N2, N3, .... , N5000           | Not Applicable           |
-| ----- | ------------------ | -------------------- | -------------- | ---------------------------------- | ------------------------ |
-| 2     | BBH signal + Noise | SEOBNRv2             | 5000           | N5001, N5002, N5003, .... , N10000 | S1, S2, S3, .... , S5000 |
-| ----- | ------------------ | -------------------- | -------------- | ---------------------------------- | ------------------------ |
-```
+# Testing on BBH merger strain data
 
 # Model Architecture :
 The following model has been obtained from the paper authored by Plamen G. Krastev [1]. You can read this paper [here](/Literature%20Review/Classification/1D-CNN/krastev_1.pdf).
@@ -52,44 +37,51 @@ dense (Dense)                (None, 7808)              60972672
 _________________________________________________________________
 dense_1 (Dense)              (None, 64)                499776    
 _________________________________________________________________
-dense_2 (Dense)              (None, 2)                 130       
+dense_2 (Dense)              (None, 3)                 195       
 =================================================================
-Total params: 61,559,090
-Trainable params: 61,559,090
+Total params: 61,559,155
+Trainable params: 61,559,155
 Non-trainable params: 0
 _________________________________________________________________
 ```
 
+# Classes :
+```
+1. Noise 
+2. BBH signal + Noise
+3. BNS signal + Noise
+```
+
+# Dataset :
+To generate this dataset, use the "IMPORTS" section (code cell no. 1), the "BBH Data Generation" section (code cell no. 2-6) and the "BNS Data Generation" section (code cell no. 7-11) of the [Data Generation](/scripts/Data%20Generation.ipynb) script.
+```
+| S.No. | Data Type          | Mode of generation   | No. of Samples |
+| ----- | ------------------ | -------------------- | -------------- |
+| 1     | Noise              | Gaussian             | 5000           |
+| ----- | ------------------ | -------------------- | -------------- |
+| 2     | BBH signal + Noise | SEOBNRv2             | 5000           |
+| ----- | ------------------ | -------------------- | -------------- |
+| 3     | BNS signal + Noise | IMRPhenomPv2_NRTidal | 5000           |
+| ----- | ------------------ | -------------------- | -------------- |
+```
+
 # Trial Hyperparameters :
 ```
-| Trial No. | Normalized? | Amplitude Re-Scaled? | Optimizer | lr   | Batch Size | Epochs |
-| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
-| 1         | No          | Yes (By 1e19)        | Adam      | 1e-3 | 128        | 10     |
-| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
-| 2         | No          | Yes (By 1e18)        | Adam      | 1e-3 | 128        | 5      |
-| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
+| Trial No. | Acc. | Normalized? | Amplitude Re-Scaled?    | Optimizer | lr   | Batch Size | Epochs |
+| --------- | ---- | ----------- | ----------------------- | --------- | ---- | ---------- | ------ |
+| 1         | 100% | No          | Yes                     | Adam      | 1e-3 | 128        | 10     |
+|           |      |             | (Noise       - by 1e19) |           |      |            |        |
+|           |      |             | (BBH + Noise - by 1e19) |           |      |            |        |
+|           |      |             | (BNS + Noise - by 1e20) |           |      |            |        |
+| --------- | ---- | ----------- | ----------------------- | --------- | ---- | ---------- | ------ |
 ```
+
+
 
 # Trial Results :
-```
-| Trial No. | Accuracy |
-| --------- | -------- |
-| 1         | 49.68%   |
-| --------- | -------- |
-| 2         | 49.99%   |
-| --------- | -------- |
-```
-
-<hr>
-
 ## Trial 1:
 <p align="center"> <img src="screenshots/graph_1.png"> </p>
 <p align="center"> <img src="screenshots/trial_1.png"> </p>
-<hr>
-
-## Trial 2:
-<p align="center"> <img src="screenshots/graph_2.png"> </p>
-<p align="center"> <img src="screenshots/trial_2.png"> </p>
 
 # References :
 1. Krastev, Plamen. (2019). Real-Time Detection of Gravitational Waves from Binary Neutron Stars using Artificial Neural Networks.
