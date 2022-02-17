@@ -6,7 +6,7 @@ The classes involved in the Binary Classification task being performed here are 
 Note that the class BBH signal + Noise represents the strain data that is obtained from the detector.
 
 # Test Dataset Description:
-In [this](/models/Testing_on_real_strain_data/1D-CNN%20Binary%20Classification) section, the models are being tested on real BBH strain data obtained from the LIGO Detector.
+In [this](/models/Testing_on_real_strain_data/1D-CNN%20Binary%20Classification) section, the models were tested on real BBH strain data obtained from the LIGO Detector.
 
 ```
 | S.No. | Data Type            | Downloaded From | No. of Samples |
