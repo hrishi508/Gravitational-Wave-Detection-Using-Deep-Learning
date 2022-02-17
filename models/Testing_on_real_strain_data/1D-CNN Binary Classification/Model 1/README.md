@@ -1,4 +1,4 @@
-# Testing on BBH merger strain data
+The following model architecture has been used for testing in this section.
 
 # Model Architecture :
 The following model has been obtained from the paper authored by Plamen G. Krastev [1]. You can read this paper [here](/Literature%20Review/Classification/1D-CNN/krastev_1.pdf).
@@ -37,51 +37,54 @@ dense (Dense)                (None, 7808)              60972672
 _________________________________________________________________
 dense_1 (Dense)              (None, 64)                499776    
 _________________________________________________________________
-dense_2 (Dense)              (None, 3)                 195       
+dense_2 (Dense)              (None, 2)                 130       
 =================================================================
-Total params: 61,559,155
-Trainable params: 61,559,155
+Total params: 61,559,090
+Trainable params: 61,559,090
 Non-trainable params: 0
 _________________________________________________________________
 ```
 
-# Classes :
+# Model Weights
 ```
-1. Noise 
-2. BBH signal + Noise
-3. BNS signal + Noise
-```
-
-# Dataset :
-To generate this dataset, use the "IMPORTS" section (code cell no. 1), the "BBH Data Generation" section (code cell no. 2-6) and the "BNS Data Generation" section (code cell no. 7-11) of the [Data Generation](/scripts/Data%20Generation.ipynb) script.
-```
-| S.No. | Data Type          | Mode of generation   | No. of Samples |
-| ----- | ------------------ | -------------------- | -------------- |
-| 1     | Noise              | Gaussian             | 5000           |
-| ----- | ------------------ | -------------------- | -------------- |
-| 2     | BBH signal + Noise | SEOBNRv2             | 5000           |
-| ----- | ------------------ | -------------------- | -------------- |
-| 3     | BNS signal + Noise | IMRPhenomPv2_NRTidal | 5000           |
-| ----- | ------------------ | -------------------- | -------------- |
+|              |                        Training Specifications                              |
+| Weight Label | ------------------------------------ | ------------------ | --------------- |
+|              | Data Labels                          | Signal Hidden?     | Whitening done? |
+| ------------ | ------------------------------------ | ------------------ | --------------- |
+| W1           | N5001, N5002, ..., N10000            | No                 | No              |
+|              | S1 + N1, S2 + N2, ..., S5000 + N5000 |                    |                 |
+| ------------ | ------------------------------------ | ------------------ | --------------- |
+| W2           | N1, N2, ..., N5000                   | Yes                | No              |
+|              | S1 + N1, S1 + N2, ..., S1 + N5000    |                    |                 |
+| ------------ | ------------------------------------ | ------------------ | --------------- |
+| W3           | N5001, N5002, ..., N10000            | Yes                | Yes             |
+|              | S1 + N1, S2 + N2, ..., S5000 + N5000 |                    |                 |
+| ------------ | ------------------------------------ | ------------------ | --------------- |
 ```
 
-# Trial Hyperparameters :
+# Testing Specifications
 ```
-| Trial No. | Acc. | Normalized? | Amplitude Re-Scaled?    | Optimizer | lr   | Batch Size | Epochs |
-| --------- | ---- | ----------- | ----------------------- | --------- | ---- | ---------- | ------ |
-| 1         | 100% | No          | Yes                     | Adam      | 1e-3 | 128        | 10     |
-|           |      |             | (Noise       - by 1e19) |           |      |            |        |
-|           |      |             | (BBH + Noise - by 1e19) |           |      |            |        |
-|           |      |             | (BNS + Noise - by 1e20) |           |      |            |        |
-| --------- | ---- | ----------- | ----------------------- | --------- | ---- | ---------- | ------ |
+| Trial.No. | Weight Label | Strain Data Pre-Processed? | No. of Samples |
+| --------- | ------------ | -------------------------- | -------------- |
+| 1         | W1           | No                         | 48             |
+| --------- | ------------ | -------------------------- | -------------- |
+| 2         | W1           | Yes                        | 48             |
+| --------- | ------------ | -------------------------- | -------------- |
+| 3         |              | No                         | 48             |
+| --------- | ------------ | -------------------------- | -------------- |
 ```
 
-
-
-# Trial Results :
-## Trial 1:
-<p align="center"> <img src="screenshots/graph_1.png"> </p>
-<p align="center"> <img src="screenshots/trial_1.png"> </p>
+# Results :
+```
+| Trial.No. | No. of Correct Predictions | Accuracy |
+| --------- | -------------------------- | -------- |
+| 1         | 8                          | 16.66%   |
+| --------- | -------------------------- | -------- |
+| 2         | 0                          | 0%       |
+| --------- | -------------------------- | -------- |
+| 3         |                            |          |
+| --------- | -------------------------- | -------- |
+```
 
 # References :
 1. Krastev, Plamen. (2019). Real-Time Detection of Gravitational Waves from Binary Neutron Stars using Artificial Neural Networks.
