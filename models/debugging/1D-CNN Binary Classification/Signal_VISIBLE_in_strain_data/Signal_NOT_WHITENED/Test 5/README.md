@@ -6,12 +6,14 @@
 
 # Dataset :
 ```
-| S.No. | Data Type          | Mode of Generation | No. of Samples | Noise Label              | Signal Label   |
-| ----- | ------------------ | ------------------ | -------------- | ------------------------ | -------------- |
-| 1     | Noise              | Gaussian           | 5000           | N1, N2, N3, .... , N5000 | Not Applicable |
-| ----- | ------------------ | ------------------ | -------------- | ------------------------ | -------------- |
-| 2     | BBH signal + Noise | SEOBNRv2           | 5000           | N1, N2, N3, .... , N5000 | S1             |
-| ----- | ------------------ | ------------------ | -------------- | ------------------------ | -------------- |
+| S.No. | Data Type          | Mode                   | No. of Samples | Noise Label              | Signal Label             |
+| ----- | ------------------ | ---------------------- | -------------- | ------------------------ | ------------------------ |
+| 1     | Noise              | Gaussian (scale = 0.1) | 5000           | N1, N2, N3, .... , N5000 | Not Applicable           |
+|       |                    | (amplitude is scaled   |                |                          |                          |
+|       |                    | to 1e-19)              |                |                          |                          |
+| ----- | ------------------ | ---------------------- | -------------- | ------------------------ | ------------------------ |
+| 2     | BBH signal + Noise | SEOBNRv2               | 5000           | N1, N2, N3, .... , N5000 | S1, S2, S3, .... , S5000 |
+| ----- | ------------------ | ---------------------- | -------------- | ------------------------ | ------------------------ |
 ```
 
 # Model Architecture :
@@ -78,9 +80,9 @@ _________________________________________________________________
 ```
 | Trial No. | Accuracy | Precision | Recall | F1 Score |
 | --------- | -------- | --------- | ------ | -------- |
-| 1         | 50.16%   | -         | -      | -        |
+| 1         | 50.01%   | 0.5       | 1      | 0.667    |
 | --------- | -------- | --------- | ------ | -------- |
-| 2         | 50.01%   | -         | -      | -        |
+| 2         | 100%     | 1         | 1      | 1        |
 | --------- | -------- | --------- | ------ | -------- |
 | 3         | 100%     | 1         | 1      | 1        |
 | --------- | -------- | --------- | ------ | -------- |
@@ -88,19 +90,25 @@ _________________________________________________________________
 | --------- | -------- | --------- | ------ | -------- |
 ```
 
+<hr>
 
 ## Trial 1:
+<p align="center"> <img src="screenshots/cm_1.png"> </p>
 <p align="center"> <img src="screenshots/graph_1.png"> </p>
 <p align="center"> <img src="screenshots/trial_1.png"> </p>
+<hr>
 
 ## Trial 2:
+<p align="center"> <img src="screenshots/cm_2.png"> </p>
 <p align="center"> <img src="screenshots/graph_2.png"> </p>
 <p align="center"> <img src="screenshots/trial_2.png"> </p>
+<hr>
 
 ## Trial 3:
 <p align="center"> <img src="screenshots/cm_3.png"> </p>
 <p align="center"> <img src="screenshots/graph_3.png"> </p>
 <p align="center"> <img src="screenshots/trial_3.png"> </p>
+<hr>
 
 ## Trial 4:
 <p align="center"> <img src="screenshots/cm_4.png"> </p>
