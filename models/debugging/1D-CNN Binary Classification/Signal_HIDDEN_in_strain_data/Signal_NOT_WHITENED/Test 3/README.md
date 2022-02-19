@@ -7,14 +7,14 @@
 # Dataset :
 It is ensured that the signal is well hidden in the merged BBH signal + Noise. 
 ```
-| S.No. | Data Type          | Mode of Generation      | No. of Samples | Noise Label | Signal Label   |
-| ----- | ------------------ | ----------------------- | -------------- | ----------- | -------------- |
-| 1     | Noise              | Gaussian  (scale = 0.1) | 5000           | N1          | Not Applicable |
-|       |                    | (amplitude is scaled    |                |             |                |
-|       |                    | to 1e-18)               |                |             |                |
-| ----- | ------------------ | ----------------------- | -------------- | ----------- | -------------- |
-| 2     | BBH signal + Noise | SEOBNRv2                | 5000           | N2          | S1             |
-| ----- | ------------------ | ----------------------- | -------------- | ----------- | -------------- |
+| S.No. | Data Type          | Mode of Generation     | No. of Samples | Noise Label | Signal Label             |
+| ----- | ------------------ | ---------------------- | -------------- | ----------- | ------------------------ |
+| 1     | Noise              | Gaussian (scale = 0.1) | 5000           | N1          | Not Applicable           |
+|       |                    | (amplitude is scaled   |                |             |                          |
+|       |                    | to 1e-18)              |                |             |                          |
+| ----- | ------------------ | ---------------------- | -------------- | ----------- | ------------------------ |
+| 2     | BBH signal + Noise | SEOBNRv2               | 5000           | N2          | S1, S2, S3, .... , S5000 |
+| ----- | ------------------ | ---------------------- | -------------- | ----------- | ------------------------ |
 ```
 
 # Model Architecture :
@@ -91,6 +91,7 @@ _________________________________________________________________
 
 ## Trial 1:
 <p align="center"> <img src="screenshots/cm_1.png"> </p>
+<p align="center"> <img src="screenshots/graph_1.png"> </p>
 <p align="center"> <img src="screenshots/trial_1.png"> </p>
 <hr>
 
