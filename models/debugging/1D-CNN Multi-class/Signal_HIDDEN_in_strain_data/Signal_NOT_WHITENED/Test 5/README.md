@@ -66,22 +66,31 @@ _________________________________________________________________
 ```
 
 # Trial Hyperparameters :
+"5-F CV" in the last column represents 5-Fold Cross Validation. 
 ```
-| Trial No. | Normalized? | Amplitude Re-Scaled? | Optimizer | lr   | Batch Size | Epochs |
-| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
-| 1         | No          | Yes (By 1e19)        | Adam      | 1e-3 | 128        | 5      |
-| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
-| 2         | No          | Yes (By 1e18)        | Adam      | 1e-3 | 128        | 5      |
-| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
+| Trial No. | Normalized? | Amplitude Re-Scaled? | Optimizer | lr   | Batch Size | Epochs | 5-F CV |
+| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
+| 1         | No          | Yes (By 1e17)        | Adam      | 1e-3 | 128        | 5      | No     |
+| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
+| 2         | No          | Yes (By 1e18)        | Adam      | 1e-3 | 128        | 5      | No     |
+| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
+| 3         | No          | Yes (By 1e19)        | Adam      | 1e-3 | 128        | 5      | No     |
+| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
+| 4         | No          | Yes (By 1e19)        | Adam      | 1e-3 | 128        | 5      | Yes    |
+| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
 ```
 
 # Trial Results :
 ```
 | Trial No. | Accuracy | Precision | Recall | F1 Score |
 | --------- | -------- | --------- | ------ | -------- |
-| 1         | 49.55%   | 0.5       | 1      | 0.667    |
+| 1         | 32.9%    | nan       | 0.333  | nan      |
 | --------- | -------- | --------- | ------ | -------- |
-| 2         | 49.90%   | 0         | 0      | -        |
+| 2         | 32.85%   | nan       | 0.333  | nan      |
+| --------- | -------- | --------- | ------ | -------- |
+| 3         | 99.37%   | 0.991     | 0.991  | 0.991    |
+| --------- | -------- | --------- | ------ | -------- |
+| 4         |          |           |        |          |
 | --------- | -------- | --------- | ------ | -------- |
 ```
 
@@ -97,6 +106,18 @@ _________________________________________________________________
 <p align="center"> <img src="screenshots/cm_2.png"> </p>
 <p align="center"> <img src="screenshots/graph_2.png"> </p>
 <p align="center"> <img src="screenshots/trial_2.png"> </p>
+<hr>
+
+## Trial 3:
+<p align="center"> <img src="screenshots/cm_3.png"> </p>
+<p align="center"> <img src="screenshots/graph_3.png"> </p>
+<p align="center"> <img src="screenshots/trial_3.png"> </p>
+<hr>
+
+## Trial 4:
+<p align="center"> <img src="screenshots/cm_4.png"> </p>
+<p align="center"> <img src="screenshots/graph_4.png"> </p>
+<p align="center"> <img src="screenshots/trial_4.png"> </p>
 
 # References :
 1. Krastev, Plamen. (2019). Real-Time Detection of Gravitational Waves from Binary Neutron Stars using Artificial Neural Networks.
