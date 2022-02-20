@@ -70,11 +70,9 @@ _________________________________________________________________
 ```
 | Trial No. | Normalized? | Amplitude Re-Scaled? | Optimizer | lr   | Batch Size | Epochs | 5-F CV |
 | --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
-| 1         | No          | Yes (By 1e19)        | Adam      | 1e-3 | 128        | 5      | No     |
+| 1         | No          | Yes (By 1e17)        | Adam      | 1e-3 | 128        | 5      | No     |
 | --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
-| 2         | No          | Yes (By 1e18)        | Adam      | 1e-3 | 128        | 5      | No     |
-| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
-| 2         | No          | Yes (By 1e18)        | Adam      | 1e-3 | 128        | 5      | Yes    |
+| 2         | No          | Yes (By 1e17)        | Adam      | 1e-3 | 128        | 3      | Yes    |
 | --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
 ```
 
@@ -85,9 +83,7 @@ _________________________________________________________________
 | 1         | 100%     | 1         | 1      | 1        |
 | --------- | -------- | --------- | ------ | -------- |
 | 2         | 100%     | 1         | 1      | 1        |
-| --------- | -------- | --------- | ------ | -------- |
-| 3         | 100%     | 1         | 1      | 1        |
-| --------- | -------- | --------- | ------ | -------- |
+| --------- | -------- | --------- | ------ | -------- |   
 ```
 
 <hr>
@@ -102,12 +98,6 @@ _________________________________________________________________
 <p align="center"> <img src="screenshots/cm_2.png"> </p>
 <p align="center"> <img src="screenshots/graph_2.png"> </p>
 <p align="center"> <img src="screenshots/trial_2.png"> </p>
-<hr>
-
-## Trial 3:
-<p align="center"> <img src="screenshots/cm_3.png"> </p>
-<p align="center"> <img src="screenshots/graph_3.png"> </p>
-<p align="center"> <img src="screenshots/trial_3.png"> </p>
 
 # References :
 1. Krastev, Plamen. (2019). Real-Time Detection of Gravitational Waves from Binary Neutron Stars using Artificial Neural Networks.
