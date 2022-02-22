@@ -66,7 +66,7 @@ _________________________________________________________________
 ```
 
 # Trial Hyperparameters :
-"5-F CV" in the last column represents 3-Fold Cross Validation. Here, a 5-Fold Cross Validation has not been shown as it was always exceeding the RAM limits on colab and crashing the session. 
+"3-F CV" in the last column represents 3-Fold Cross Validation. Here, a 5-Fold Cross Validation has not been shown as it was always exceeding the RAM limits on colab and crashing the session. 
 ```
 | Trial No. | Normalized? | Amplitude Re-Scaled? | Optimizer | lr   | Batch Size | Epochs | 3-F CV |
 | --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
