@@ -66,7 +66,7 @@ _________________________________________________________________
 ```
 
 # Trial Hyperparameters :
-"5-F CV" in the last column represents 5-Fold Cross Validation. 
+"3-F CV" in the last column represents 3-Fold Cross Validation. Here, a 5-Fold Cross Validation has not been shown as it was always exceeding the RAM limits on colab and crashing the session. 
 ```
 | Trial No. | Normalized? | Amplitude Re-Scaled? | Optimizer | lr   | Batch Size | Epochs | 5-F CV |
 | --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
@@ -76,7 +76,11 @@ _________________________________________________________________
 | --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
 | 3         | No          | Yes (By 1e19)        | Adam      | 1e-3 | 128        | 5      | No     |
 | --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
-| 4         | No          | Yes (By 1e19)        | Adam      | 1e-3 | 128        | 5      | Yes    |
+| 4         | No          | Yes (By 1e19)        | Adam      | 1e-3 | 128        | 10     | Yes    |
+| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
+| 5         | No          | Yes (By 1e19)        | Adam      | 1e-3 | 128        | 10     | Yes    |
+| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
+| 6         | No          | Yes (By 1e19)        | Adam      | 1e-3 | 128        | 10     | Yes    |
 | --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
 ```
 
@@ -90,7 +94,11 @@ _________________________________________________________________
 | --------- | -------- | --------- | ------ | -------- |
 | 3         | 99.37%   | 0.991     | 0.991  | 0.991    |
 | --------- | -------- | --------- | ------ | -------- |
-| 4         |          |           |        |          |
+| 4         | 55.2%    | 0.665     | 0.555  | 0.605    |
+| --------- | -------- | --------- | ------ | -------- |
+| 5         | 33.5%    | 0.329     | 0.329  | 0.329    |
+| --------- | -------- | --------- | ------ | -------- |
+| 6         | 44.7     | nan       | 0.326  | nan      |
 | --------- | -------- | --------- | ------ | -------- |
 ```
 
@@ -117,7 +125,25 @@ _________________________________________________________________
 ## Trial 4:
 <p align="center"> <img src="screenshots/cm_4.png"> </p>
 <p align="center"> <img src="screenshots/graph_4.png"> </p>
-<p align="center"> <img src="screenshots/trial_4.png"> </p>
+<p align="center"> <img src="screenshots/trial_41.png"> </p>
+<p align="center"> <img src="screenshots/trial_42.png"> </p>
+<p align="center"> <img src="screenshots/trial_43.png"> </p>
+<hr>
+
+## Trial 5:
+<p align="center"> <img src="screenshots/cm_5.png"> </p>
+<p align="center"> <img src="screenshots/graph_5.png"> </p>
+<p align="center"> <img src="screenshots/trial_51.png"> </p>
+<p align="center"> <img src="screenshots/trial_52.png"> </p>
+<p align="center"> <img src="screenshots/trial_53.png"> </p>
+<hr>
+
+## Trial 6:
+<p align="center"> <img src="screenshots/cm_6.png"> </p>
+<p align="center"> <img src="screenshots/graph_6.png"> </p>
+<p align="center"> <img src="screenshots/trial_61.png"> </p>
+<p align="center"> <img src="screenshots/trial_62.png"> </p>
+<p align="center"> <img src="screenshots/trial_63.png"> </p>
 
 # References :
 1. Krastev, Plamen. (2019). Real-Time Detection of Gravitational Waves from Binary Neutron Stars using Artificial Neural Networks.
