@@ -66,6 +66,7 @@ _________________________________________________________________
 ```
 
 # Trial Hyperparameters :
+"3-F CV" in the last column represents 3-Fold Cross Validation. Here, a 5-Fold Cross Validation has not been shown as it was always exceeding the RAM limits on colab and crashing the session.
 ```
 | Trial No. | Normalized? | Amplitude Re-Scaled? | Optimizer | lr   | Batch Size | Epochs | 5-F CV |
 | --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
@@ -75,7 +76,7 @@ _________________________________________________________________
 | --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
 | 3         | No          | Yes (By 1e17)        | Adam      | 1e-3 | 128        | 5      | No     |
 | --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
-| 4         | No          | Yes (By 1e17)        | Adam      | 1e-3 | 128        | 5      | Yes    |
+| 4         | No          | Yes (By 1e17)        | Adam      | 1e-3 | 128        | 10     | Yes    |
 | --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
 ```
 
@@ -89,7 +90,7 @@ _________________________________________________________________
 | --------- | -------- | --------- | ------ | -------- |
 | 3         | 100%     | 1         | 1      | 1        |
 | --------- | -------- | --------- | ------ | -------- |
-| 4         |          |           |        |          |
+| 4         | 77.9%    | 0.865     | 0.775  | 0.817    |
 | --------- | -------- | --------- | ------ | -------- |
 ```
 
@@ -116,7 +117,10 @@ _________________________________________________________________
 ## Trial 4:
 <p align="center"> <img src="screenshots/cm_4.png"> </p>
 <p align="center"> <img src="screenshots/graph_4.png"> </p>
-<p align="center"> <img src="screenshots/trial_4.png"> </p>
+<p align="center"> <img src="screenshots/trial_4_1.png"> </p>
+<p align="center"> <img src="screenshots/trial_4_2.png"> </p>
+<p align="center"> <img src="screenshots/trial_4_3.png"> </p>
+
 
 # References :
 1. Krastev, Plamen. (2019). Real-Time Detection of Gravitational Waves from Binary Neutron Stars using Artificial Neural Networks.
