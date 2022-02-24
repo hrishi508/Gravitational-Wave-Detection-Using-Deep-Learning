@@ -31,18 +31,16 @@ re_lu_3 (ReLU)               (None, 27, 512)           0
 _________________________________________________________________
 flatten (Flatten)            (None, 13824)             0         
 _________________________________________________________________
-dense (Dense)                (None, 13824)             191116800 
+dense (Dense)                (None, 128)               1769600   
 _________________________________________________________________
-dense_1 (Dense)              (None, 128)               1769600   
-_________________________________________________________________
-dense_2 (Dense)              (None, 64)                8256      
+dense_1 (Dense)              (None, 64)                8256      
 _________________________________________________________________
 dropout (Dropout)            (None, 64)                0         
 _________________________________________________________________
-dense_3 (Dense)              (None, 2)                 130       
+dense_2 (Dense)              (None, 2)                 130       
 =================================================================
-Total params: 212,296,450
-Trainable params: 212,296,450
+Total params: 21,179,650
+Trainable params: 21,179,650
 Non-trainable params: 0
 _________________________________________________________________
 ```
@@ -70,13 +68,9 @@ To generate this dataset, use the "IMPORTS" section (code cell no. 1) and the "B
 | --------- | -------- | ----------- | -------------------- | ------------ | --------- | ---- | ---------- | ------ |
 | 1         | 49.31%   | No          | No                   | 0.2          | Adam      | 1e-3 | 128        | 10     |
 | --------- | -------- | ----------- | -------------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 2         | 49.90%   | No          | No                   | 0.2          | Adam      | 1e-1 | 128        | 10     |
+| 2         | 49.32%   | Yes         | Yes (Due to Norm)    | 0.2          | Adam      | 1e-3 | 128        | 10     |
 | --------- | -------- | ----------- | -------------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 3         | 49.91%   | No          | No                   | 0.2          | Adam      | 1e-5 | 128        | 10     |
-| --------- | -------- | ----------- | -------------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 4         | 49.32%   | Yes         | Yes (Due to Norm)    | 0.2          | Adam      | 1e-3 | 128        | 10     |
-| --------- | -------- | ----------- | -------------------- | ------------ | --------- | ---- | ---------- | ------ |
-| 5         | 100%     | No          | Yes (by 1e19)        | 0.2          | Adam      | 1e-3 | 128        | 5      |
+| 3         | 100%     | No          | Yes (by 1e19)        | 0.2          | Adam      | 1e-3 | 128        | 5      |
 | --------- | -------- | ----------- | -------------------- | ------------ | --------- | ---- | ---------- | ------ |
 ```
  
@@ -93,19 +87,10 @@ To generate this dataset, use the "IMPORTS" section (code cell no. 1) and the "B
 <p align="center"> <img src="screenshots/graph_3.png"> </p>
 <p align="center"> <img src="screenshots/1dcnn_binary_class_model_13.png"> </p>
 
-## Trial 4:
-<p align="center"> <img src="screenshots/graph_4.png"> </p>
-<p align="center"> <img src="screenshots/1dcnn_binary_class_model_14.png"> </p>
-
-## Trial 5:
-<p align="center"> <img src="screenshots/graph_5.png"> </p>
-<p align="center"> <img src="screenshots/1dcnn_binary_class_model_15.png"> </p>
-
 # Conclusions :
 
 + Batch size = 128 is ideal since it has a faster runtime than batch size = 256 and it also does not cause the runtime  to crash due to exhaustion of RAM resources on colab. 
 + 10 epochs are enough to determine whether the model is able to learn any features. 
-+ lr = 1e-5 hardly causes any change in the loss and accuracy at all so there is no point in reducing the learning rate further. 
 + Normalization of the dataset caused the training time to increase significantly, and the results were still baseline, so it is not feasible to try out further combinations with normalization. 
 
 # References :
