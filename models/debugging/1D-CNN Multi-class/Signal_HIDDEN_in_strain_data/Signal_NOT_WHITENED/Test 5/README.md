@@ -23,64 +23,54 @@ It is ensured that the signal is well hidden in the merged BBH signal + Noise.
 # Model Architecture :
 The following model has been obtained from the paper authored by Plamen G. Krastev [1]. You can read this paper [here](/Literature%20Review/Classification/1D-CNN/krastev_1.pdf).
 ``` 
-Model: "sequential"
+Model: "sequential_1"
 _________________________________________________________________
 Layer (type)                 Output Shape              Param #   
 =================================================================
-conv1d (Conv1D)              (None, 16369, 16)         272       
+conv1d_4 (Conv1D)            (None, 16369, 16)         272       
 _________________________________________________________________
-max_pooling1d (MaxPooling1D) (None, 4092, 16)          0         
+max_pooling1d_4 (MaxPooling1 (None, 4092, 16)          0         
 _________________________________________________________________
-re_lu (ReLU)                 (None, 4092, 16)          0         
+re_lu_4 (ReLU)               (None, 4092, 16)          0         
 _________________________________________________________________
-conv1d_1 (Conv1D)            (None, 4085, 32)          4128      
+conv1d_5 (Conv1D)            (None, 4085, 32)          4128      
 _________________________________________________________________
-max_pooling1d_1 (MaxPooling1 (None, 1021, 32)          0         
+max_pooling1d_5 (MaxPooling1 (None, 1021, 32)          0         
 _________________________________________________________________
-re_lu_1 (ReLU)               (None, 1021, 32)          0         
+re_lu_5 (ReLU)               (None, 1021, 32)          0         
 _________________________________________________________________
-conv1d_2 (Conv1D)            (None, 1014, 64)          16448     
+conv1d_6 (Conv1D)            (None, 1014, 64)          16448     
 _________________________________________________________________
-max_pooling1d_2 (MaxPooling1 (None, 253, 64)           0         
+max_pooling1d_6 (MaxPooling1 (None, 253, 64)           0         
 _________________________________________________________________
-re_lu_2 (ReLU)               (None, 253, 64)           0         
+re_lu_6 (ReLU)               (None, 253, 64)           0         
 _________________________________________________________________
-conv1d_3 (Conv1D)            (None, 246, 128)          65664     
+conv1d_7 (Conv1D)            (None, 246, 128)          65664     
 _________________________________________________________________
-max_pooling1d_3 (MaxPooling1 (None, 61, 128)           0         
+max_pooling1d_7 (MaxPooling1 (None, 61, 128)           0         
 _________________________________________________________________
-re_lu_3 (ReLU)               (None, 61, 128)           0         
+re_lu_7 (ReLU)               (None, 61, 128)           0         
 _________________________________________________________________
-flatten (Flatten)            (None, 7808)              0         
+flatten_1 (Flatten)          (None, 7808)              0         
 _________________________________________________________________
-dense (Dense)                (None, 7808)              60972672  
+dense_3 (Dense)              (None, 64)                499776    
 _________________________________________________________________
-dense_1 (Dense)              (None, 64)                499776    
-_________________________________________________________________
-dense_2 (Dense)              (None, 3)                 195       
+dense_4 (Dense)              (None, 2)                 130       
 =================================================================
-Total params: 61,559,155
-Trainable params: 61,559,155
+Total params: 586,418
+Trainable params: 586,418
 Non-trainable params: 0
 _________________________________________________________________
 ```
 
 # Trial Hyperparameters :
-"3-F CV" in the last column represents 3-Fold Cross Validation. Here, a 5-Fold Cross Validation has not been shown as it was always exceeding the RAM limits on colab and crashing the session. 
+"5-F CV" in the last column represents 5-Fold Cross Validation. 
 ```
 | Trial No. | Normalized? | Amplitude Re-Scaled? | Optimizer | lr   | Batch Size | Epochs | 5-F CV |
 | --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
-| 1         | No          | Yes (By 1e17)        | Adam      | 1e-3 | 128        | 5      | No     |
+| 1         | No          | Yes (By 1e19)        | Adam      | 1e-3 | 128        | 5      | No     |
 | --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
-| 2         | No          | Yes (By 1e18)        | Adam      | 1e-3 | 128        | 5      | No     |
-| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
-| 3         | No          | Yes (By 1e19)        | Adam      | 1e-3 | 128        | 5      | No     |
-| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
-| 4         | No          | Yes (By 1e19)        | Adam      | 1e-3 | 128        | 10     | Yes    |
-| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
-| 5         | No          | Yes (By 1e19)        | Adam      | 1e-3 | 128        | 10     | Yes    |
-| --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
-| 6         | No          | Yes (By 1e19)        | Adam      | 1e-3 | 128        | 10     | Yes    |
+| 2         | No          | Yes (By 1e19)        | Adam      | 1e-3 | 128        | 5      | Yes    |
 | --------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ | ------ |
 ```
 
@@ -88,17 +78,9 @@ _________________________________________________________________
 ```
 | Trial No. | Accuracy | Precision | Recall | F1 Score |
 | --------- | -------- | --------- | ------ | -------- |
-| 1         | 32.9%    | nan       | 0.333  | nan      |
+| 1         | 100%     | 1         | 1      | 1        |
 | --------- | -------- | --------- | ------ | -------- |
-| 2         | 32.85%   | nan       | 0.333  | nan      |
-| --------- | -------- | --------- | ------ | -------- |
-| 3         | 99.37%   | 0.991     | 0.991  | 0.991    |
-| --------- | -------- | --------- | ------ | -------- |
-| 4         | 55.2%    | 0.665     | 0.555  | 0.605    |
-| --------- | -------- | --------- | ------ | -------- |
-| 5         | 33.5%    | 0.329     | 0.329  | 0.329    |
-| --------- | -------- | --------- | ------ | -------- |
-| 6         | 44.7     | nan       | 0.326  | nan      |
+| 2         | 86.6%    | 0.903     | 0.863  | 0.883    |
 | --------- | -------- | --------- | ------ | -------- |
 ```
 
@@ -114,36 +96,6 @@ _________________________________________________________________
 <p align="center"> <img src="screenshots/cm_2.png"> </p>
 <p align="center"> <img src="screenshots/graph_2.png"> </p>
 <p align="center"> <img src="screenshots/trial_2.png"> </p>
-<hr>
-
-## Trial 3:
-<p align="center"> <img src="screenshots/cm_3.png"> </p>
-<p align="center"> <img src="screenshots/graph_3.png"> </p>
-<p align="center"> <img src="screenshots/trial_3.png"> </p>
-<hr>
-
-## Trial 4:
-<p align="center"> <img src="screenshots/cm_4.png"> </p>
-<p align="center"> <img src="screenshots/graph_4.png"> </p>
-<p align="center"> <img src="screenshots/trial_41.png"> </p>
-<p align="center"> <img src="screenshots/trial_42.png"> </p>
-<p align="center"> <img src="screenshots/trial_43.png"> </p>
-<hr>
-
-## Trial 5:
-<p align="center"> <img src="screenshots/cm_5.png"> </p>
-<p align="center"> <img src="screenshots/graph_5.png"> </p>
-<p align="center"> <img src="screenshots/trial_51.png"> </p>
-<p align="center"> <img src="screenshots/trial_52.png"> </p>
-<p align="center"> <img src="screenshots/trial_53.png"> </p>
-<hr>
-
-## Trial 6:
-<p align="center"> <img src="screenshots/cm_6.png"> </p>
-<p align="center"> <img src="screenshots/graph_6.png"> </p>
-<p align="center"> <img src="screenshots/trial_61.png"> </p>
-<p align="center"> <img src="screenshots/trial_62.png"> </p>
-<p align="center"> <img src="screenshots/trial_63.png"> </p>
 
 # References :
 1. Krastev, Plamen. (2019). Real-Time Detection of Gravitational Waves from Binary Neutron Stars using Artificial Neural Networks.
