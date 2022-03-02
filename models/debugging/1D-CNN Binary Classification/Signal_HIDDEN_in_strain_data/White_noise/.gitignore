@@ -6,9 +6,9 @@ Test 6 alternate hard/
 Test 5 alternate/
 Test 6 alternate/
 README_old.md
-test_1_5_fold_validation/
-test_2_5_fold_validation/
-test_3_5_fold_validation/
-test_4_5_fold_validation/
-test_5_5_fold_validation/
-test_6_5_fold_validation/
+test_1_5_fold_validation.ipynb
+test_2_5_fold_validation.ipynb
+test_3_5_fold_validation.ipynb
+test_4_5_fold_validation.ipynb
+test_5_5_fold_validation.ipynb
+test_6_5_fold_validation.ipynb
