@@ -6,3 +6,9 @@ plots/
 LIGO Detector Data/
 val_data/
 raw_val_data_files/
+colab_scripts/
+model_trial_1.h5
+model_trial_1_level_1.h5
+model_trial_1_level_2.h5
+roc plots/
+bar plots/
