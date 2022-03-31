@@ -324,6 +324,55 @@ No. of Noise (Coloured) data samples: 24
 
 <hr>
 
+# Results on Marginal Events Data:
+## LEVEL 1
+
+Total no. of data samples in level 1:      27
+
+```
+| ------ | ------- | -------------- | -------------- | --------------- |
+| S. No. | Scaling | No. of samples | No. of samples | No. of samples  |
+|        |         | predicted as   | predicted as   | sent to Level 2 |
+|        |         | Signal         | Noise          | model           |
+| ------ | ------- | -------------- | -------------- | --------------- |
+| 1      | 1e19    | 26             | 1              | 26              |
+| ------ | ------- | -------------- | -------------- | --------------- |
+| 2      | 1e18    | 20             | 7              | 20              |
+| ------ | ------- | -------------- | -------------- | --------------- |
+```
+
+## LEVEL 2
+
+Total no. of data samples in level 2:        25
+
+```
+| ------ | ------- | -------------- | -------------- |
+| S. No. | Scaling | No. of samples | No. of samples |
+|        |         | predicted as   | predicted as   |
+|        |         | BBH Signal     | BNS Signal     |
+| ------ | ------- | -------------- | -------------- |
+| 1      | 1e19    | 26             | 0              |
+| ------ | ------- | -------------- | -------------- |
+| 2      | 1e18    | 20             | 0              |
+| ------ | ------- | -------------- | -------------- |
+```
+
+## OVERALL
+
+Total no. of data samples: 27
+
+```
+| ------ | ------- | -------------- | -------------- | -------------- |
+| S. No. | Scaling | No. of samples | No. of samples | No. of samples |
+|        |         | predicted as   | predicted as   | predicted as   |
+|        |         | Noise          | BBH Signal     | BNS Signal     |
+| ------ | ------- | -------------- | -------------- | -------------- |
+| 1      | 1e19    | 1              | 26             | 0              |
+| ------ | ------- | -------------- | -------------- | -------------- |
+| 2      | 1e18    | 7              | 20             | 0              |
+| ------ | ------- | -------------- | -------------- | -------------- |
+```
+
 
 # References :
 1. Krastev, Plamen. (2019). Real-Time Detection of Gravitational Waves from Binary Neutron Stars using Artificial Neural Networks.
