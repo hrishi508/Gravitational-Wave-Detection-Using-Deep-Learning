@@ -204,9 +204,9 @@ No. of Noise (Coloured) data samples: 24
 | ------ | -------- | --------- | ------ | -------- | -------- | -------- |
 ```
 
-## LEVEL 1:
+<!-- ## LEVEL 1:
 <p align="center"> <img src="screenshots/real_cm_1_level_1.png"> </p>
-<p align="center"> <img src="screenshots/real_roc_1_level_1.png"> </p>
+<p align="center"> <img src="screenshots/real_roc_1_level_1.png"> </p> -->
 
 <hr>
 
