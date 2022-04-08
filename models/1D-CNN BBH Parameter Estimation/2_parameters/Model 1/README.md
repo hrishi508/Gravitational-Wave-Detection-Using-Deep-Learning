@@ -1,3 +1,11 @@
+Note that here we are training the model to estimate the parameters m1 and m2 which are the component masses of the Binary black holes corresponding to the BBH merger.
+
+# Parameters :
+```
+1. m1
+2. m2
+```
+
 # Model Architecture :
 The following model has been obtained from the paper authored by Plamen G. Krastev [1]. You can read this paper [here](/Literature%20Review/Classification/1D-CNN/krastev_1.pdf).
 ``` 
@@ -41,38 +49,9 @@ Non-trainable params: 0
 _________________________________________________________________
 ```
 
-# Classes :
-```
-1. Noise 
-2. BBH signal + Noise
-```
-
-# Dataset :
-To generate this dataset, use the "IMPORTS" section (code cell no. 1) and the "BBH Data Generation" section (code cell no. 2-6) of the [Data Generation](/scripts/Data%20Generation.ipynb) script.
-```
-| S.No. | Data Type          | Mode of generation   | No. of Samples |
-| ----- | ------------------ | -------------------- | -------------- |
-| 1     | Noise              | Gaussian             | 5000           |
-| ----- | ------------------ | -------------------- | -------------- |
-| 2     | BBH signal + Noise | SEOBNRv2             | 5000           |
-| ----- | ------------------ | -------------------- | -------------- |
-```
-
-# Trial Hyperparameters :
-```
-| Trial No. | Accuracy | Normalized? | Amplitude Re-Scaled? | Optimizer | lr   | Batch Size | Epochs |
-| --------- | -------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
-| 1         | 100%     | No          | Yes                  | Adam      | 1e-3 | 128        | 10     |
-| --------- | -------- | ----------- | -------------------- | --------- | ---- | ---------- | ------ |
-```
-
-# Trial Results :
-## Trial 1:
-<p align="center"> <img src="screenshots/graph_1.png"> </p>
-<p align="center"> <img src="screenshots/trial_1.png"> </p>
 
 # References :
-1. Krastev, Plamen. (2019). Real-Time Detection of Gravitational Waves from Binary Neutron Stars using Artificial Neural Networks.
+1. Krastev, Plamen. (2021). Detection and parameter estimation of gravitational waves from binary neutron-star mergers in real LIGO data using deep learning.
 
 
 
