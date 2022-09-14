@@ -31,14 +31,14 @@ In this project we use various deep-learning techniques to rapidly identify tran
 2) Tensorflow - 2.3.0
 3) Keras      - 2.3.1 
 
-# Data Description
+<!-- # Data Description
 describe the data here, give overview about time series data then specifically about gravitational wave data and the types of glitches or noise.
     
 # Architecture
 Insert best architectures here.
 
 # Results
-Insert results here.
+Insert results here. -->
 
 # References
 1. <p>Chauhan, Y., 2020. Deep Learning Techniques to Make Gravitational Wave Detections from Weak Time-series Data. arXiv preprint arXiv:2007.05889.</p>
